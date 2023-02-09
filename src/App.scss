@@ -20,3 +20,27 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $color-grey-light-2;
+    line-height: 1.6;
+    font-family: $font-primary;
+
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [row-1 row-end] 80vh [row-2 row-12] min-content [row-3 row-end] 40vw[row-4] repeat(3, [row] min-content);
+    grid-template-columns: repeat(2, [colm-start] 1fr [colm-end]);
+    row-gap: 3rem;
+}

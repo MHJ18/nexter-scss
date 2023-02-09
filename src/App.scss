@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
-}
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+$color-secondary: #101d2c;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
 
-.App-link {
-  color: #61dafb;
-}
+// FONT VARIABLES
+$font-primary: 'Nunito',
+sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;

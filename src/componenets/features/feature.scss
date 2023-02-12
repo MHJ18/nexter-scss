@@ -1,3 +1,58 @@
-.feature {
-    background-color: firebrick;
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+$font-primary: 'Nunito',
+sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
+
+.feature-grid {
+
+    grid-column: col-start/col-end 8;
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 5rem;
+    column-gap: 2rem;
+
+    & .feature {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        column-gap: 1.3rem;
+        background-color: #333;
+        border-radius: 10px;
+        padding: 2rem 1.5rem;
+        align-items: start;
+        box-shadow: 2px 3px 17px rgba(85, 85, 85, 0.1), -2px -2px 15px rgba(247, 163, 9, 0.3);
+
+        & .svg {
+            fill: #fca311;
+            width: 4rem;
+            height: 4rem;
+            transform: translateY(-0.6rem);
+        }
+
+        font-size: 1.6rem;
+
+        &>h4 {
+            font-family: $font-display;
+            font-weight: 500;
+            font-size: 1.8rem;
+
+            color: white;
+
+        }
+
+        &>p {
+            color: #aaa;
+            grid-column: 2/3;
+        }
+    }
 }

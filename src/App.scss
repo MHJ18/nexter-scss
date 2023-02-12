@@ -40,7 +40,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: [row-1 row-end] 80vh [row-2 row-12] min-content [row-3 row-end] 40vw[row-4] repeat(3, [row] min-content);
-    grid-template-columns: repeat(2, [colm-start] 1fr [colm-end]);
+    grid-template-rows: [row-start] 80vh [row-end row-1] min-content [row-1 row-2] 38vw[row-end] repeat(3, [row-s] min-content[row-e]);
+    grid-template-columns: [side-start] 8rem [side-end v-start] minmax(6rem, 1fr) [v-end] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [v-ls] minmax(6rem, 1fr)[v-le];
     row-gap: 3rem;
 }

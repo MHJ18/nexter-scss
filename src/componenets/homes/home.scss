@@ -1,0 +1,87 @@
+//card
+.home {
+    grid-column: col-start/v-ls;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    grid-gap: 5rem;
+    transition: all 1s;
+    padding: 2rem;
+
+}
+
+sub {
+    font-size: 1rem;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: black;
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+
+    & .image {
+
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+
+    & h4 {
+        padding: 1rem;
+        background-color: rgba(10, 10, 10, 01);
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(20%, 50%);
+        color: white;
+
+
+        border-radius: 3px;
+        font-size: 1.5rem;
+    }
+
+    & .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+        margin-top: 3rem;
+
+
+
+        &>p {
+            display: flex;
+            align-items: center;
+            margin-left: 1.2rem;
+
+            font-size: 1.2rem;
+
+            svg {
+                margin-right: 1rem;
+                height: 2rem;
+                width: 2rem;
+                fill: white;
+            }
+        }
+
+        & .btn {
+            border: unset;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+            grid-column: 1/-1;
+            font-weight: 600;
+            background-color: #c69963;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #af7a39;
+            }
+        }
+    }
+}

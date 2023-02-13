@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.scss";
 import Features from "./componenets/features/Features";
 import Footer from "./componenets/footer/Footer";
@@ -19,6 +20,9 @@ function App() {
       ).format(count)}`
     );
   }
+  useEffect(() => {
+    console.log("Date:", date);
+  }, [date]);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./home.scss";
-const Home = () => {
+const Home = ({ click }) => {
   const dep = 1;
   const [first, setfirst] = useState([]);
   useEffect(() => {
@@ -67,12 +67,12 @@ const Home = () => {
         },
       },
     ]);
-  }, []);
+  }, [dep]);
 
   return (
     <div className="home">
       {first?.map((res, ind) => {
-        return <Card props={res} />;
+        return <Card props={res} click={onclick} />;
       })}
     </div>
   );

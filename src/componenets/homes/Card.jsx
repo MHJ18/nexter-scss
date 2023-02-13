@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ props }) => {
+const Card = ({ props, onClick }) => {
   return (
     <>
       <div className="card">
@@ -34,7 +34,9 @@ const Card = ({ props }) => {
             </svg>
             {props.features.price}
           </p>
-          <button className="btn">contact retailers</button>
+          <button role="button" onClick={onclick} className="btn">
+            contact retailers
+          </button>
         </div>
       </div>
     </>

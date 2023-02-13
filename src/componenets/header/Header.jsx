@@ -1,13 +1,15 @@
 import React from "react";
 import "./header.scss";
-const Header = () => {
+const Header = ({ click }) => {
   return (
     <div className="header">
       <div className="header-main">
         <img src="logo.png" alt="" className="header-image" />
         <h3 className="header-heading">Your own home:</h3>
         <h1 className="header-heading-main">The Ultimate personal freedom</h1>
-        <button className="header-button">View our properties</button>
+        <button onClick={click} className="header-button">
+          View our properties
+        </button>
         <div className="logos">
           <p className="logos-des"> As seen on</p>
           <div className="header-logos">

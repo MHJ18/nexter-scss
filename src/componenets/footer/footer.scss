@@ -1,4 +1,37 @@
 .footer {
-    background-color: violet;
+
     grid-column: v-start/-1;
+    background-color: black;
+
+    & .footer-class {
+
+
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+            grid-template-rows: repeat(1, 7vw);
+            // align-content: center;
+            padding: 2rem;
+            align-items: center;
+            // justify-items: center;
+            list-style: none;
+            grid-gap: 2rem;
+
+
+            & .list-item-1 {
+                color: #bbb;
+                font-size: 1.3rem;
+                padding: 1.5rem 1.5rem;
+                font-weight: 600;
+                border-radius: 5px;
+                color-interpolation-filters: linearRGB;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+
+        }
+    }
 }

@@ -22,15 +22,23 @@ sans-serif;
     row-gap: 5rem;
     column-gap: 2rem;
 
+
+
     & .feature {
         display: grid;
         grid-template-columns: min-content 1fr;
-        column-gap: 1.3rem;
+        column-gap: 1.5rem;
         background-color: #333;
         border-radius: 10px;
         padding: 2rem 1.5rem;
         align-items: start;
         box-shadow: 2px 3px 17px rgba(85, 85, 85, 0.1), -2px -2px 15px rgba(247, 163, 9, 0.3);
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.03);
+        }
 
         & .svg {
             fill: #fca311;

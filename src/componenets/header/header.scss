@@ -1,4 +1,111 @@
 .header {
-    background-color: wheat;
+    // background-color: wheat;
     grid-column: v-start/col-end 7;
+
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to right bottom, #0a1624e3, #0d1c2c), no-repeat top/cover url(../../../public/hero.jpeg);
+
+}
+
+.header {
+    &-main {
+        color: white;
+        display: grid;
+        grid-template-rows: 6rem 1fr repeat(1, min-content) 1fr 6rem auto;
+        row-gap: 3rem;
+        align-items: center;
+        margin-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    &-logos>img {
+        height: 3rem;
+        display: block;
+
+        filter: grayscale(90%) invert(40%);
+    }
+
+    &-image {
+
+        height: 4rem;
+        justify-self: center;
+
+    }
+
+    &-heading {
+        align-self: stretch;
+        grid-row: 4/5;
+        grid-column: 1/1;
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        color: wheat;
+        text-transform: uppercase;
+    }
+
+    &-heading-main {
+        grid-column: 1/1;
+        grid-row: 4/5;
+        font-size: 4.5rem;
+        margin-top: 2rem;
+    }
+
+    &-button {
+        grid-row: 5/6;
+        border: unset;
+        font-size: 1.5rem;
+        justify-self: start;
+        padding: 0 3rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: #0a1624e3;
+        font-weight: 600;
+        border-radius: 3px;
+        background-color: #fca311;
+        align-self: stretch;
+
+        &:hover {
+            transform: scale(0.99);
+            background-color: #f79c0a;
+        }
+    }
+
+    & .logos {
+        grid-row: 6/7;
+
+
+
+        & .header-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, min-content));
+            grid-template-rows: auto auto;
+            column-gap: 3rem;
+            row-gap: 2rem;
+            justify-items: center;
+            justify-content: center;
+
+
+        }
+
+        &-des {
+            color: #aaa;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 1fr max-content 1fr;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2rem;
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+
+            &::before,
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                background-color: currentColor;
+            }
+        }
+    }
 }

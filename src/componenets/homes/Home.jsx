@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./home.scss";
 const Home = () => {
+  const dep = 1;
   const [first, setfirst] = useState([]);
   useEffect(() => {
     setfirst([
@@ -66,7 +67,7 @@ const Home = () => {
         },
       },
     ]);
-  }, []);
+  }, [dep]);
 
   return (
     <div className="home">

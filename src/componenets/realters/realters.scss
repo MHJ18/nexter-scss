@@ -1,3 +1,10 @@
+@mixin responsive {
+    @media only screen and (max-width:39em) {
+        @content
+    }
+
+}
+
 .realters-1 {
 
     // background-color: aqua;
@@ -5,6 +12,12 @@
     display: grid;
     grid-template-rows: 3vw min-content min-content;
     row-gap: 2rem;
+
+    @include responsive {
+        grid-row: 2/3;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     justify-content: center;
 
@@ -20,6 +33,12 @@
         grid-template-rows: repeat(auto-fit, minmax(10rem, min-content));
         grid-row: 3/4;
         row-gap: 2rem;
+
+        @include responsive {
+
+            grid-template-rows: auto;
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     & .realters {

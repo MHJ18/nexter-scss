@@ -67,7 +67,7 @@ const Home = () => {
         },
       },
     ]);
-  }, [dep]);
+  }, []);
 
   return (
     <div className="home">

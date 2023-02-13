@@ -21,11 +21,14 @@ $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
 
-@mixin(){
-    @media screen {
-        
+@mixin responsive {
+    @media only screen and (max-width:39em) {
+        @content
     }
+
 }
+
+
 * {
     padding: 0;
     margin: 0;
@@ -34,6 +37,10 @@ $bp-small: 37.5em; // 600px;
 
 html {
     font-size: 62.5%;
+
+    @include responsive() {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -46,6 +53,12 @@ body {
 
 .container {
     display: grid;
+
+    @include responsive() {
+
+        grid-template-columns: [side-start] 0rem [side-end v-start] minmax(6rem, 1fr) [v-end] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [v-ls] minmax(6rem, 1fr)[v-le];
+    }
+
     grid-template-rows: [row-start] 80vh [row-end row-1] min-content [row-1 row-2] 38vw[row-end] repeat(3, [row-s] min-content[row-e]);
     grid-template-columns: [side-start] 8rem [side-end v-start] minmax(6rem, 1fr) [v-end] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [v-ls] minmax(6rem, 1fr)[v-le];
     row-gap: 3rem;

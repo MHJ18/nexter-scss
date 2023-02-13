@@ -28,14 +28,14 @@ function App() {
   return (
     <>
       <div className="container">
-        <Sidebar />
-        <Header />
-        <Realters />
-        <Features />
-        <Story />
-        <Home />
-        <Gallery />
-        <Footer />
+        <Sidebar date={date} />
+        <Header date={date} />
+        <Realters date={date} />
+        <Features date={date} />
+        <Story date={date} />
+        <Home date={date} />
+        <Gallery date={date} />
+        <Footer date={date} />
       </div>
     </>
   );

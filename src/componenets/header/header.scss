@@ -1,9 +1,15 @@
 .header {
     // background-color: wheat;
     grid-column: v-start/col-end 7;
-
     backdrop-filter: blur(10px);
     background: linear-gradient(to right bottom, #0a1624e3, #0d1c2c), no-repeat top/cover url(../../../public/hero.jpeg);
+
+}
+
+@mixin responsive {
+    @media only screen and (max-width:39em) {
+        @content
+    }
 
 }
 
@@ -16,12 +22,16 @@
         align-items: center;
         margin-left: 5rem;
         padding-right: 5rem;
+
+        @include responsive() {
+            grid-template-rows: 6rem 1fr auto 1fr 6rem auto;
+
+        }
     }
 
     &-logos>img {
         height: 3rem;
         display: block;
-
         filter: grayscale(90%) invert(40%);
     }
 
@@ -40,9 +50,19 @@
         font-size: 2rem;
         color: wheat;
         text-transform: uppercase;
+
+        @include responsive() {
+            font-size: 1.5rem;
+
+        }
     }
 
     &-heading-main {
+        @include responsive() {
+            font-size: 3.5rem;
+
+        }
+
         grid-column: 1/1;
         grid-row: 4/5;
         font-size: 4.5rem;

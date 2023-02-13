@@ -10,11 +10,13 @@ import Sidebar from "./componenets/sidebar/Sidebar";
 import Story from "./componenets/story/Story";
 
 function App() {
-  const [first, setfirst] = useState(null);
+  const [first, setfirst] = useState([]);
 
   const count = 26254.39;
   const date = new Date("2012-05-24");
-
+  const style = {
+    backgroundColor: "black",
+  };
   function log(locale) {
     const result = `${new Intl.DateTimeFormat(locale).format(
       date

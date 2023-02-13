@@ -9,6 +9,17 @@ import Sidebar from "./componenets/sidebar/Sidebar";
 import Story from "./componenets/story/Story";
 
 function App() {
+  const count = 26254.39;
+  const date = new Date("2012-05-24");
+
+  function log(locale) {
+    console.log(
+      `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(
+        locale
+      ).format(count)}`
+    );
+  }
+
   return (
     <>
       <div className="container">
